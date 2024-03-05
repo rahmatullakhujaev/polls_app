@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Questions</title>
+</head>
+<body>
+    <h2>Questions:</h2>
+
+    <ol>
+
+        {%for i in qs%}
+            <li><a href="{% url 'question-detail' question_id=i.id %}">{{i.text}}</a></li>
+        {% endfor %}
+
+    </ol>
+</body>
+</html>
